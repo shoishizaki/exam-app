@@ -1,9 +1,6 @@
 import csv
 
-
 import student
-
-
 
 class Student_list():
     def __init__(self):
@@ -20,9 +17,6 @@ class Student_list():
 
 
     def show_student_list(self):
-
-        self.read_exam()
-
         for ls in self.student_list:
             print('----------------------------------')
             print('student_id:', ls.get_student_id())
@@ -30,8 +24,6 @@ class Student_list():
             print('wish_major:', ls.get_wish_major())
             print('major:', ls.get_major())
             print('----------------------------------')
-
-
 
 
 
