@@ -2,8 +2,8 @@ import student
 import student_list
 
 def main():
+    stu_ls = student_list.Student_list()
     while True:
-        stu = student_list.Student_list()
         print('#####################')
         print(1, 'read student list')
         print(2, 'show student list')
@@ -12,9 +12,9 @@ def main():
         number = input('choose number:')
 
         if number == '1':
-            stu.read_exam()
+            stu_ls.read_exam()
         elif number == '2':
-            stu.show_student_list()
+            stu_ls.show_student_list()
         elif number == '3':
             print('Thank you.')
             break
