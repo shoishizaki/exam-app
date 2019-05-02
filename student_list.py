@@ -24,12 +24,3 @@ class Student_list():
             print('wish_major:', ls.get_wish_major())
             print('major:', ls.get_major())
             print('----------------------------------')
-
-
-
-
-
-
-
-
-
