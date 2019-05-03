@@ -7,6 +7,9 @@ class Student_list():
         self.student_list = []
 
     def read_exam(self):
+        if self.student_list is not None:
+            self.student_list = []
+
         with open('data/student.csv', 'r') as data_stu:
             reader = csv.reader(data_stu)
             ls = [row for row in reader]
