@@ -5,6 +5,13 @@ class Student():
         self.wish_major = wish_major
         self.major = ""
 
+    def __str__(self):
+        return 'id:{}, name:{}, wish-major:{}, major:{}'\
+            .format(self.student_id,
+                    self.name,
+                    self.wish_major,
+                    self.major)
+
     def get_student_id(self):
         return self.student_id
 
