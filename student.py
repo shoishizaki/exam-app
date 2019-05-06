@@ -6,11 +6,9 @@ class Student():
         self.major = ""
 
     def __str__(self):
-        return 'id:{}, name:{}, wish-major:{}, major:{}'\
+        return 'id:{}, name:{}'\
             .format(self.student_id,
-                    self.name,
-                    self.wish_major,
-                    self.major)
+                    self.name)
 
     def get_student_id(self):
         return self.student_id

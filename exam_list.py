@@ -2,14 +2,18 @@ import exam
 import student_list
 
 class Exam_list():
-    def __init__(self):
+    def __init__(self, students):
         self.exam_list = []
+        self.enter_exam(students)
 
-    def enter_exam(self):
-        students = student_list.Student_list()
-        students.read_exam()
+    def enter_exam(self, students):
+        if len(students) == 0:
+            print('There is no student date here.')
+        
+            return
+
         print("Please enter the student's score.")
-        for student in students.student_list:
+        for student in students:
             print(student)
             japanese = input('japanese:')
             math = input('math:')

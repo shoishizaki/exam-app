@@ -16,7 +16,7 @@ class Exam():
                     self.science,
                     self.society)
 
-    def get_name(self):
+    def get_student(self):
         return self.student
 
     def get_japanese(self):
@@ -33,21 +33,3 @@ class Exam():
 
     def get_society(self):
         return self.society
-
-    def set_name(self, student):
-        self.student = student
-
-    def set_japanese(self, japanese):
-        self.japanese = japanese
-
-    def set_math(self, math):
-        self.math = math
-
-    def set_english(self, english):
-        self.english = english
-
-    def set_science(self,science):
-        self.science = science
-
-    def set_society(self, society):
-        self.society = society
