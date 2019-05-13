@@ -44,40 +44,29 @@ class Exam_list():
                               science=ls.get_science(),
                               society=ls.get_society()))
 
-    def cal_total_exam(self):
-        if len(self.exam_list) == 0:
-            print('There is no exam data here.')
+    def cal_total_of_exam(self):
+        for i in range(len(self.exam_list)):
+            japanese = self.exam_list[i].get_japanese()
+            math = self.exam_list[i].get_math()
+            english = self.exam_list[i].get_english()
+            science = self.exam_list[i].get_science()
+            society = self.exam_list[i].get_society()
+            total = int(japanese) + int(math) + int(english) + int(science) + int(society)
+            self.total_ls.append(total)
 
-        else:
-            for i in range(len(self.exam_list)):
-                japanese = self.exam_list[i].get_japanese()
-                math = self.exam_list[i].get_math()
-                english = self.exam_list[i].get_english()
-                science = self.exam_list[i].get_science()
-                society = self.exam_list[i].get_society()
-                total = int(japanese) + int(math) + int(english) + int(science) + int(society)
-                self.total_ls.append(total)
+    def cal_science_of_exam(self):
 
-    def cal_science_exam(self):
-        if len(self.exam_list) == 0:
-            print('There is no exam data here.')
+        for i in range(len(self.exam_list)):
+            math = self.exam_list[i].get_math()
+            english = self.exam_list[i].get_english()
+            science = self.exam_list[i].get_science()
+            total = int(math) + int(english) + int(science)
+            self.science_subject_ls.append(total)
 
-        else:
-            for i in range(len(self.exam_list)):
-                math = self.exam_list[i].get_math()
-                english = self.exam_list[i].get_english()
-                science = self.exam_list[i].get_science()
-                total = int(math) + int(english) + int(science)
-                self.science_subject_ls.append(total)
-
-    def cal_cultural_exam(self):
-        if len(self.exam_list) == 0:
-            print('There is no exam data here.')
-
-        else:
-            for i in range(len(self.exam_list)):
-                japanese = self.exam_list[i].get_japanese()
-                english = self.exam_list[i].get_english()
-                society = self.exam_list[i].get_society()
-                total = int(japanese) + int(english) + int(society)
-                self.cultural_subject_ls.append(total)
+    def cal_cultural_of_exam(self):
+        for i in range(len(self.exam_list)):
+            japanese = self.exam_list[i].get_japanese()
+            english = self.exam_list[i].get_english()
+            society = self.exam_list[i].get_society()
+            total = int(japanese) + int(english) + int(society)
+            self.cultural_subject_ls.append(total)
