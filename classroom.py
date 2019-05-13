@@ -1,72 +1,73 @@
-import exam
-import student
+class LiteratureClassRoom():
+    def __init__(self,number, name, total, major_score):
+        self.number = number
+        self.name = name
+        self.total = total
+        self.major_score = major_score
 
-class Exam_list():
-    def __init__(self, students):
-        self.exam_list = []
-        self.total_ls = []
-        self.science_subject_ls = []
-        self.cultural_subject_ls = []
-        self.successful_candidate_list = []
-        self.rejected_list = []
-        self.enter_exam(students)
+    def get_name(self):
+        return self.name
 
-    def enter_exam(self, students):
-        if len(students) == 0:
-            print('There is no student date here.')
-        
-            return
+    def get_total(self):
+        return self.total
 
-        print("Please enter the student's score.")
-        for student in students:
-            print(student)
-            japanese = input('japanese:')
-            math = input('math:')
-            english = input('english:')
-            science = input('science:')
-            society = input('society:')
-            ex = exam.Exam(student, japanese, math, english, science, society)
-            self.exam_list.append(ex)
-        print('Thank you!')
+    def get_major_score(self):
+        return self.major_score
 
-    def show_exam(self):
-        if len(self.exam_list) == 0:
-            print('There is no exam data here.')
+    def __str__(self):
+        return 'No:{}, name:{}, total:{}, major-score:{}'\
+            .format(self.number,
+                    self.name,
+                    self.total,
+                    self.major_score)
 
-        else:
-            for ls in self.exam_list:
-                print('student: {student}, japanese: {japanese}, math: {math},'
-                      ' english: {english}, science: {science},society: {society}'
-                      .format(student=ls.student,
-                              japanese=ls.get_japanese(),
-                              math=ls.get_math(),
-                              english=ls.get_english(),
-                              science=ls.get_science(),
-                              society=ls.get_society()))
+class ScienceClassRoom():
+    def __init__(self,number, name, total, major_score):
+        self.number = number
+        self.name = name
+        self.total = total
+        self.major_score = major_score
 
-    def cal_total_of_exam(self):
-        for i in range(len(self.exam_list)):
-            japanese = self.exam_list[i].get_japanese()
-            math = self.exam_list[i].get_math()
-            english = self.exam_list[i].get_english()
-            science = self.exam_list[i].get_science()
-            society = self.exam_list[i].get_society()
-            total = int(japanese) + int(math) + int(english) + int(science) + int(society)
-            self.total_ls.append(total)
+    def get_name(self):
+        return self.name
 
-    def cal_science_of_exam(self):
+    def get_total(self):
+        return self.total
 
-        for i in range(len(self.exam_list)):
-            math = self.exam_list[i].get_math()
-            english = self.exam_list[i].get_english()
-            science = self.exam_list[i].get_science()
-            total = int(math) + int(english) + int(science)
-            self.science_subject_ls.append(total)
+    def get_major_score(self):
+        return self.major_score
 
-    def cal_cultural_of_exam(self):
-        for i in range(len(self.exam_list)):
-            japanese = self.exam_list[i].get_japanese()
-            english = self.exam_list[i].get_english()
-            society = self.exam_list[i].get_society()
-            total = int(japanese) + int(english) + int(society)
-            self.cultural_subject_ls.append(total)
+    def __str__(self):
+        return 'No:{}, name:{}, total:{}, major-score:{}'\
+            .format(self.number,
+                    self.name,
+                    self.total,
+                    self.major_score)
+
+
+
+class FailureStudentList():
+    def __init__(self, name, total, wish_major, major_score):
+        self.name = name
+        self.total = total
+        self.wish_major = wish_major
+        self.major_score = major_score
+
+    def get_name(self):
+        return self.name
+
+    def get_total(self):
+        return self.total
+
+    def get_wish_major(self):
+        return self.wish_major
+
+    def get_major_score(self):
+        return self.major_score
+
+    def __str__(self):
+        return 'name:{}, total:{}, wish-major:{}, major-score:{}'\
+            .format(self.name,
+                    self.total,
+                    self.wish_major,
+                    self.major_score)
