@@ -1,11 +1,14 @@
-class Exam():
-    def __init__(self, student, japanese, math, english, science, society):
+class Exam_result():
+    def __init__(self, student, japanese, math, english, science, society, total, science_subject, cultural_subject):
         self.student = student
         self.japanese = japanese
         self.math = math
         self.english = english
         self.science = science
         self.society = society
+        self.total = total
+        self.science_subject = science_subject
+        self.cultural_subject = cultural_subject
 
     def __str__(self):
         return 'name:{}, japanese:{},math:{}, english:{}, science:{}, society:{}'\
@@ -33,3 +36,12 @@ class Exam():
 
     def get_society(self):
         return self.society
+
+    def get_total(self):
+        return self.total
+
+    def get_science_subject(self):
+        return self.science_subject
+
+    def get_cultural_subject(self):
+        return self.cultural_subject
